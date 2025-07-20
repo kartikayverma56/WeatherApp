@@ -6,7 +6,8 @@ const WeatherWidget = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const apiKey = "b375df7704694e465ac1916bcec6d268";
+const apiKey = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
+
 
   
   const fetchWeather = async (cityName) => {
